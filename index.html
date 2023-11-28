@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="" class="logo">
+            <img src="images/Logo-Kabupaten-Demak-removebg-preview.png" alt="" width="50px">
+        </a>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="sig.html">SIG Demak</a></li>
+            <li><a href="tematik.html">Tematik</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        <ul class="menu-hamburger" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </ul>
+    </header>
+    <section>
+        <img src="images/11471-removebg-preview.png" alt="" id="stars">
+        <img src="images/110544-ONXS00-842-removebg-preview.png" alt="" id="moon">
+        <img src="images/ilustrasi-removebg-preview.png" alt="" id="mountains_behind">
+        <h3 id="text">SISTEM INFORMASI GEOGRAFIS <br> SEBARAN PENERIMA BANTUAN RTLH <br>KABUPATEN DEMAK</h3>
+        <a href="#sec" id="btn">Telusuri</a>
+        <img src="images/ilustrasi-removebg-preview (1).png" alt="" id="mountains_front">
+    </section> 
+    <div class="sec" id="sec">
+        <h2>Kabupaten Demak</h2>
+        <p>Kabupaten Demak merupakan salah satu Kabupaten yang ada di Jawa Tengah,
+            terletak di sebelah sisi timur Kota Semarang. Kabupaten Demak memiliki wilayah
+            seluas -+ 1.149,07 km dengan 14 Kecamatan dan berpenduduk sebanyak 1.158.772
+            jiwa tahun 2019. Kabupeten Demak merupakan daerah penghasil padi terbesar di Jawa
+            Tengah dan mendapat predikat sebagai lumbung padi. Tetapi hal itu tidak membuat
+            kabupaten Demak terlepas dari masalah kemiskinan. Dilansir dari Rapat Koordinasi
+            Evaluasi Hasil Pendataan awal regsoseg tahun 2022, garis kemiskinan Kabupaten
+            Demak meningkat dari 445 ribu menjadi 471 ribu. Pelayanan Rehabilitasi bantuan
+            RTLH (Rumah Tidak Layak Huni) di gencarkan untuk menekan angka kemiskinan.
+            Bantuan Senilai Rp 15 Juta yang diberikan Pemerintah Kabupaten Demak diperuntukan
+            untuk membeli material dan biaya membangun rumah. <br><br></p>
+        <h2>Bantuan RTLH (Rumah Tidak Layak Huni)</h2>
+        <p>Bantuan Sosial RTLH merupakan bantuan stimulan berupa uang untuk pembelian bahan bangunan guna pemugaran rumah
+             tidak layak huni dari pemerintah daerah kepada individu, keluarga, kelompok atau masyarakat. <br><br>
+             Bantuan Perbaikan Rumah Tidak Layak Huni (BP RTLH) APBD Kabupaten Demak 2023 kembali dicairkan, Selasa (15/8/2023).
+              Kepada 115 penerima bantuan, Bupati Demak dr Hj Eisti'anah SE mengingatkan, 
+              tidak adanya potongan sepeser pun pada bantuan senilai Rp 15 juta per KK itu. </p>
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 +'px';
+            moon.style.top = value * 1.05 +'px';
+            mountains_behind.style.top = value * 0.5 +'px';
+            mountains_front.style.top = value * 0 +'px';
+            text.style.marginRight = value * 4 +'px';
+            text.style.marginTop = value * 1.5 +'px';
+            btn.style.marginTop = value * 1.5 +'px';
+            header.style.top = value * 0.5 + 'px';
+        }); 
+    </script>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
