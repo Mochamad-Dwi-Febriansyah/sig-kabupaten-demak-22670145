@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+
+    <link rel="stylesheet" href="../qgis2web_2023_11_27-20_55_51_335758/css/leaflet.css">
+    <link rel="stylesheet" href="../qgis2web_2023_11_27-20_55_51_335758/css/qgis2web.css"><link rel="stylesheet" href="qgis2web_2023_11_27-20_55_51_335758/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../qgis2web_2023_11_27-20_55_51_335758/css/leaflet-search.css">
+    <link rel="stylesheet" href="../qgis2web_2023_11_27-20_55_51_335758/css/leaflet-control-geocoder.Geocoder.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+    #map {
+        width: 100%;
+        height: 322px;
+        border-radius: 5px;
+        border: 3px solid #7597de;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="" class="logo">
+            <img src="../images/Logo-Kabupaten-Demak-removebg-preview.png" alt="" width="50px">
+        </a>
+        <ul class="nav-menu" id="nav-menu-bar">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../sig.html"  class="active">SIG Demak</a></li>
+            <!-- <li><a href="tematik.html">Tematik</a></li> -->
+            <li><a href="../contact.html" >Contact</a></li>
+        </ul>
+        <ul class="menu-hamburger" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </ul>
+    </header>
+    <section class="heroAbout pt">
+        <img src="../images/masjid_agung_demak (1).jpg" alt=""> 
+    </section> 
+    <div class="sec" id="sec">
+        <h2>Marking Penerima Tahap 3</h2>
+        <div class="frame">
+            <div id="map">
+            </div>
+        </div>
+        <h2 class="mt-5">Diagram Penerima Tahap 3</h2>
+        <div class="mt-3">
+            <div class="container p-0">
+                <div class="chart" style="flex: 1 0 0;">
+                    <canvas id="barchart" width="300" height="300"></canvas>
+                </div>
+                <div class="chart"  style="flex: 1 0 0;">
+                    <canvas id="doughnut" width="300" height="300"></canvas>
+                </div>
+                <div class="chart"  style="flex: 1 0 0;">
+                  <canvas id="line" width="300" height="300"></canvas>
+              </div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js"></script> 
+            <script src="chart/tahap3.js"></script>
+            <script src="doughnut/tahap3.js"></script>
+            <script src="line/tahap3.js"></script>
+        </div>
+        <h2 class="mt-5">Tabel Penerima Tahap 3</h2>
+        <div class="mt-3">
+            <table class="table table-striped bg-light" style="border-radius: 5px; font-size: 0.7rem;">
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Nama</th>
+                    <th scope="col">Desa</th>
+                    <th scope="col">Kecamatan</th>
+                  </tr>
+                </thead> 
+                <tbody>   
+                    <tr class="row215">
+                      <td class="column0 style21 n">1</td>
+                      <td class="column1 style22 s">AHMAD ISMAIL</td>
+                      <td class="column2 style23 s">BETAHWALANG</td>
+                      <td class="column3 style23 s">BONANG</td>
+                    </tr>
+                    <tr class="row216">
+                      <td class="column0 style21 n">2</td>
+                      <td class="column1 style22 s">KHUZAEMAH</td>
+                      <td class="column2 style25 s">BETAHWALANG</td>
+                      <td class="column3 style25 s">BONANG</td>
+                    </tr>
+                    <tr class="row217">
+                      <td class="column0 style21 n">3</td>
+                      <td class="column1 style27 s">MASKANAH</td>
+                      <td class="column2 style21 s">JATIROGO</td>
+                      <td class="column3 style21 s">BONANG</td>
+                    </tr>
+                    <tr class="row218">
+                      <td class="column0 style21 n">4</td>
+                      <td class="column1 style27 s">MISBAKHUL ADIB</td>
+                      <td class="column2 style21 s">JATIROGO</td>
+                      <td class="column3 style21 s">BONANG</td>
+                    </tr>
+                    <tr class="row219">
+                      <td class="column0 style21 n">5</td>
+                      <td class="column1 style22 s">SUYATNO</td>
+                      <td class="column2 style25 s">TLOGOBOYO</td>
+                      <td class="column3 style25 s">BONANG</td>
+                    </tr>
+                    <tr class="row220">
+                      <td class="column0 style21 n">6</td>
+                      <td class="column1 style22 s">KASAROH</td>
+                      <td class="column2 style23 s">TRIDONOREJO</td>
+                      <td class="column3 style23 s">BONANG</td>
+                    </tr>
+                    <tr class="row221">
+                      <td class="column0 style21 n">7</td>
+                      <td class="column1 style22 s">SUBADI</td>
+                      <td class="column2 style23 s">BETOKAN</td>
+                      <td class="column3 style23 s">DEMAK</td>
+                    </tr>
+                    <tr class="row222">
+                      <td class="column0 style21 n">8</td>
+                      <td class="column1 style27 s">PARMI</td>
+                      <td class="column2 style21 s">BINTORO</td>
+                      <td class="column3 style21 s">DEMAK</td>
+                    </tr>
+                    <tr class="row223">
+                      <td class="column0 style21 n">9</td>
+                      <td class="column1 style27 s">SITI SUNDARI</td>
+                      <td class="column2 style21 s">BINTORO</td>
+                      <td class="column3 style21 s">DEMAK</td>
+                    </tr>
+                    <tr class="row224">
+                      <td class="column0 style21 n">10</td>
+                      <td class="column1 style22 s">SUPIYAH</td>
+                      <td class="column2 style23 s">BINTORO</td>
+                      <td class="column3 style23 s">DEMAK</td>
+                    </tr>
+                    <tr class="row225">
+                      <td class="column0 style21 n">11</td>
+                      <td class="column1 style22 s">KASMINAH</td>
+                      <td class="column2 style23 s">DONOROJO</td>
+                      <td class="column3 style23 s">DEMAK</td>
+                    </tr>
+                    <tr class="row226">
+                      <td class="column0 style21 n">12</td>
+                      <td class="column1 style22 s">SUYATMAH</td>
+                      <td class="column2 style23 s">MANGUNJIWAN</td>
+                      <td class="column3 style23 s">DEMAK</td>
+                    </tr>
+                    <tr class="row227">
+                      <td class="column0 style21 n">13</td>
+                      <td class="column1 style22 s">BADIUL FALAK</td>
+                      <td class="column2 style23 s">BALEREJO</td>
+                      <td class="column3 style23 s">DEMPET</td>
+                    </tr>
+                    <tr class="row228">
+                      <td class="column0 style21 n">14</td>
+                      <td class="column1 style22 s">IKSAN</td>
+                      <td class="column2 style23 s">BALEREJO</td>
+                      <td class="column3 style23 s">DEMPET</td>
+                    </tr>
+                    <tr class="row229">
+                      <td class="column0 style21 n">15</td>
+                      <td class="column1 style22 s">JAMILAH</td>
+                      <td class="column2 style23 s">BALEREJO</td>
+                      <td class="column3 style23 s">DEMPET</td>
+                    </tr>
+                    <tr class="row230">
+                      <td class="column0 style21 n">16</td>
+                      <td class="column1 style22 s">KARTINAH</td>
+                      <td class="column2 style23 s">BALEREJO</td>
+                      <td class="column3 style23 s">DEMPET</td>
+                    </tr>
+                    <tr class="row231">
+                      <td class="column0 style21 n">17</td>
+                      <td class="column1 style27 s">MARYATON</td>
+                      <td class="column2 style21 s">BALEREJO</td>
+                      <td class="column3 style21 s">DEMPET</td>
+                    </tr>
+                    <tr class="row232">
+                      <td class="column0 style21 n">18</td>
+                      <td class="column1 style27 s">ROMDLONI</td>
+                      <td class="column2 style21 s">BALEREJO</td>
+                      <td class="column3 style21 s">DEMPET</td>
+                    </tr>
+                    <tr class="row233">
+                      <td class="column0 style21 n">19</td>
+                      <td class="column1 style27 s">SUKARJAN</td>
+                      <td class="column2 style21 s">BALEREJO</td>
+                      <td class="column3 style21 s">DEMPET</td>
+                    </tr>
+                    <tr class="row234">
+                      <td class="column0 style21 n">20</td>
+                      <td class="column1 style27 s">SUMARDI</td>
+                      <td class="column2 style21 s">BALEREJO</td>
+                      <td class="column3 style21 s">DEMPET</td>
+                    </tr>
+                    <tr class="row235">
+                      <td class="column0 style21 n">21</td>
+                      <td class="column1 style27 s">ERPAN</td>
+                      <td class="column2 style21 s">BRAKAS</td>
+                      <td class="column3 style21 s">DEMPET</td>
+                    </tr>
+                    <tr class="row236">
+                      <td class="column0 style21 n">22</td>
+                      <td class="column1 style22 s">MASTOYAH</td>
+                      <td class="column2 style23 s">BRAKAS</td>
+                      <td class="column3 style23 s">DEMPET</td>
+                    </tr>
+                    <tr class="row237">
+                      <td class="column0 style21 n">23</td>
+                      <td class="column1 style22 s">RASMINAH</td>
+                      <td class="column2 style23 s">BRAKAS</td>
+                      <td class="column3 style23 s">DEMPET</td>
+                    </tr>
+                    <tr class="row238">
+                      <td class="column0 style21 n">24</td>
+                      <td class="column1 style22 s">SUKINI</td>
+                      <td class="column2 style23 s">BRAKAS</td>
+                      <td class="column3 style23 s">DEMPET</td>
+                    </tr>
+                    <tr class="row239">
+                      <td class="column0 style21 n">25</td>
+                      <td class="column1 style27 s">TIRAH</td>
+                      <td class="column2 style21 s">BRAKAS</td>
+                      <td class="column3 style21 s">DEMPET</td>
+                    </tr>
+                    <tr class="row240">
+                      <td class="column0 style21 n">26</td>
+                      <td class="column1 style27 s">MARYATUN</td>
+                      <td class="column2 style21 s">KEBONSARI</td>
+                      <td class="column3 style21 s">DEMPET</td>
+                    </tr>
+                    <tr class="row241">
+                      <td class="column0 style21 n">27</td>
+                      <td class="column1 style27 s">PARINEM</td>
+                      <td class="column2 style21 s">KEBONSARI</td>
+                      <td class="column3 style21 s">DEMPET</td>
+                    </tr>
+                    <tr class="row242">
+                      <td class="column0 style21 n">28</td>
+                      <td class="column1 style27 s">SUKARNO</td>
+                      <td class="column2 style21 s">KEBONSARI</td>
+                      <td class="column3 style21 s">DEMPET</td>
+                    </tr>
+                    <tr class="row243">
+                      <td class="column0 style21 n">29</td>
+                      <td class="column1 style27 s">SUPANGAT</td>
+                      <td class="column2 style21 s">KEBONSARI</td>
+                      <td class="column3 style21 s">DEMPET</td>
+                    </tr>
+                    <tr class="row244">
+                      <td class="column0 style21 n">30</td>
+                      <td class="column1 style22 s">ACHMAD YATIM</td>
+                      <td class="column2 style23 s">KUNIR</td>
+                      <td class="column3 style23 s">DEMPET</td>
+                    </tr>
+                    <tr class="row245">
+                      <td class="column0 style21 n">31</td>
+                      <td class="column1 style22 s">AMINAH</td>
+                      <td class="column2 style23 s">KUNIR</td>
+                      <td class="column3 style23 s">DEMPET</td>
+                    </tr>
+                    <tr class="row246">
+                      <td class="column0 style21 n">32</td>
+                      <td class="column1 style22 s">MOH. AMIN</td>
+                      <td class="column2 style25 s">KUNIR</td>
+                      <td class="column3 style25 s">DEMPET</td>
+                    </tr>
+                    <tr class="row247">
+                      <td class="column0 style21 n">33</td>
+                      <td class="column1 style27 s">MULYONO</td>
+                      <td class="column2 style21 s">KUNIR</td>
+                      <td class="column3 style21 s">DEMPET</td>
+                    </tr>
+                    <tr class="row248">
+                      <td class="column0 style21 n">34</td>
+                      <td class="column1 style27 s">SARMADI</td>
+                      <td class="column2 style21 s">GUNTUR</td>
+                      <td class="column3 style21 s">GUNTUR</td>
+                    </tr>
+                    <tr class="row249">
+                      <td class="column0 style21 n">35</td>
+                      <td class="column1 style22 s">AGUS KUSYANTO</td>
+                      <td class="column2 style23 s">SIDOKUMPUL</td>
+                      <td class="column3 style23 s">GUNTUR</td>
+                    </tr>
+                    <tr class="row250">
+                      <td class="column0 style21 n">36</td>
+                      <td class="column1 style22 s">AHMAD MUNZHIR</td>
+                      <td class="column2 style23 s">SIDOKUMPUL</td>
+                      <td class="column3 style23 s">GUNTUR</td>
+                    </tr>
+                    <tr class="row251">
+                      <td class="column0 style21 n">37</td>
+                      <td class="column1 style22 s">JUMONO</td>
+                      <td class="column2 style25 s">SIDOKUMPUL</td>
+                      <td class="column3 style25 s">GUNTUR</td>
+                    </tr>
+                    <tr class="row252">
+                      <td class="column0 style21 n">38</td>
+                      <td class="column1 style22 s">KARSAN</td>
+                      <td class="column2 style25 s">SIDOKUMPUL</td>
+                      <td class="column3 style25 s">GUNTUR</td>
+                    </tr>
+                    <tr class="row253">
+                      <td class="column0 style21 n">39</td>
+                      <td class="column1 style22 s">MUSRIPAH</td>
+                      <td class="column2 style23 s">SIDOKUMPUL</td>
+                      <td class="column3 style23 s">GUNTUR</td>
+                    </tr>
+                    <tr class="row254">
+                      <td class="column0 style21 n">40</td>
+                      <td class="column1 style27 s">RUKEMI</td>
+                      <td class="column2 style21 s">SIDOKUMPUL</td>
+                      <td class="column3 style21 s">GUNTUR</td>
+                    </tr>
+                    <tr class="row255">
+                      <td class="column0 style21 n">41</td>
+                      <td class="column1 style27 s">SUPARTI</td>
+                      <td class="column2 style21 s">SIDOKUMPUL</td>
+                      <td class="column3 style21 s">GUNTUR</td>
+                    </tr>
+                    <tr class="row256">
+                      <td class="column0 style21 n">42</td>
+                      <td class="column1 style27 s">UNTUNG ARIYADI</td>
+                      <td class="column2 style21 s">SIDOKUMPUL</td>
+                      <td class="column3 style21 s">GUNTUR</td>
+                    </tr>
+                    <tr class="row257">
+                      <td class="column0 style21 n">43</td>
+                      <td class="column1 style27 s">ALI IMRON</td>
+                      <td class="column2 style21 s">TRIMULYO</td>
+                      <td class="column3 style21 s">GUNTUR</td>
+                    </tr>
+                    <tr class="row258">
+                      <td class="column0 style21 n">44</td>
+                      <td class="column1 style22 s">MASROAH</td>
+                      <td class="column2 style23 s">TRIMULYO</td>
+                      <td class="column3 style23 s">GUNTUR</td>
+                    </tr>
+                    <tr class="row259">
+                      <td class="column0 style21 n">45</td>
+                      <td class="column1 style22 s">MUHAMMAD HAMBALI</td>
+                      <td class="column2 style23 s">TRIMULYO</td>
+                      <td class="column3 style23 s">GUNTUR</td>
+                    </tr>
+                    <tr class="row260">
+                      <td class="column0 style21 n">46</td>
+                      <td class="column1 style27 s">MUKAROMAH</td>
+                      <td class="column2 style21 s">TRIMULYO</td>
+                      <td class="column3 style21 s">GUNTUR</td>
+                    </tr>
+                    <tr class="row261">
+                      <td class="column0 style21 n">47</td>
+                      <td class="column1 style27 s">SAEFUDIN</td>
+                      <td class="column2 style21 s">TRIMULYO</td>
+                      <td class="column3 style21 s">GUNTUR</td>
+                    </tr>
+                    <tr class="row262">
+                      <td class="column0 style21 n">48</td>
+                      <td class="column1 style27 s">SUNARDI</td>
+                      <td class="column2 style21 s">TRIMULYO</td>
+                      <td class="column3 style21 s">GUNTUR</td>
+                    </tr>
+                    <tr class="row263">
+                      <td class="column0 style21 n">49</td>
+                      <td class="column1 style22 s">KARIMIN</td>
+                      <td class="column2 style23 s">BUMIREJO</td>
+                      <td class="column3 style23 s">KARANGAWEN</td>
+                    </tr>
+                    <tr class="row264">
+                      <td class="column0 style21 n">50</td>
+                      <td class="column1 style27 s">MARDI</td>
+                      <td class="column2 style21 s">BUMIREJO</td>
+                      <td class="column3 style21 s">KARANGAWEN</td>
+                    </tr>
+                    <tr class="row265">
+                      <td class="column0 style21 n">51</td>
+                      <td class="column1 style27 s">MUH TAROM</td>
+                      <td class="column2 style21 s">BUMIREJO</td>
+                      <td class="column3 style21 s">KARANGAWEN</td>
+                    </tr>
+                    <tr class="row266">
+                      <td class="column0 style21 n">52</td>
+                      <td class="column1 style27 s">PAIMIN</td>
+                      <td class="column2 style21 s">BUMIREJO</td>
+                      <td class="column3 style21 s">KARANGAWEN</td>
+                    </tr>
+                    <tr class="row267">
+                      <td class="column0 style21 n">53</td>
+                      <td class="column1 style27 s">SUTIMAH</td>
+                      <td class="column2 style21 s">BUMIREJO</td>
+                      <td class="column3 style21 s">KARANGAWEN</td>
+                    </tr>
+                    <tr class="row268">
+                      <td class="column0 style21 n">54</td>
+                      <td class="column1 style27 s">K. SABAR</td>
+                      <td class="column2 style21 s">REJOSARI</td>
+                      <td class="column3 style21 s">KARANGAWEN</td>
+                    </tr>
+                    <tr class="row269">
+                      <td class="column0 style21 n">55</td>
+                      <td class="column1 style27 s">KOTIAH</td>
+                      <td class="column2 style21 s">REJOSARI</td>
+                      <td class="column3 style21 s">KARANGAWEN</td>
+                    </tr>
+                    <tr class="row270">
+                      <td class="column0 style21 n">56</td>
+                      <td class="column1 style27 s">PASMI</td>
+                      <td class="column2 style21 s">REJOSARI</td>
+                      <td class="column3 style21 s">KARANGAWEN</td>
+                    </tr>
+                    <tr class="row271">
+                      <td class="column0 style21 n">57</td>
+                      <td class="column1 style27 s">PUTRI DEWI CAHYA PERMATASARI</td>
+                      <td class="column2 style21 s">REJOSARI</td>
+                      <td class="column3 style21 s">KARANGAWEN</td>
+                    </tr>
+                    <tr class="row272">
+                      <td class="column0 style21 n">58</td>
+                      <td class="column1 style22 s">SUGIMAH</td>
+                      <td class="column2 style23 s">REJOSARI</td>
+                      <td class="column3 style23 s">KARANGAWEN</td>
+                    </tr>
+                    <tr class="row273">
+                      <td class="column0 style21 n">59</td>
+                      <td class="column1 style27 s">SUPARMIN</td>
+                      <td class="column2 style21 s">REJOSARI</td>
+                      <td class="column3 style21 s">KARANGAWEN</td>
+                    </tr>
+                    <tr class="row274">
+                      <td class="column0 style21 n">60</td>
+                      <td class="column1 style27 s">JUMARI</td>
+                      <td class="column2 style21 s">DONOREJO</td>
+                      <td class="column3 style21 s">KARANGTENGAH</td>
+                    </tr>
+                    <tr class="row275">
+                      <td class="column0 style21 n">61</td>
+                      <td class="column1 style35 s">KUNTARI</td>
+                      <td class="column2 style36 s">DONOREJO</td>
+                      <td class="column3 style23 s">KARANGTENGAH</td>
+                    </tr>
+                    <tr class="row276">
+                      <td class="column0 style21 n">62</td>
+                      <td class="column1 style35 s">SUDARWI</td>
+                      <td class="column2 style36 s">DONOREJO</td>
+                      <td class="column3 style23 s">KARANGTENGAH</td>
+                    </tr>
+                    <tr class="row277">
+                      <td class="column0 style21 n">63</td>
+                      <td class="column1 style35 s">SUKIRAN</td>
+                      <td class="column2 style36 s">DONOREJO</td>
+                      <td class="column3 style23 s">KARANGTENGAH</td>
+                    </tr>
+                    <tr class="row278">
+                      <td class="column0 style21 n">64</td>
+                      <td class="column1 style35 s">SULIMAH</td>
+                      <td class="column2 style36 s">DONOREJO</td>
+                      <td class="column3 style23 s">KARANGTENGAH</td>
+                    </tr>
+                    <tr class="row279">
+                      <td class="column0 style21 n">65</td>
+                      <td class="column1 style35 s">SUWARTO</td>
+                      <td class="column2 style36 s">DONOREJO</td>
+                      <td class="column3 style23 s">KARANGTENGAH</td>
+                    </tr>
+                    <tr class="row280">
+                      <td class="column0 style21 n">66</td>
+                      <td class="column1 style35 s">WARYUNI</td>
+                      <td class="column2 style36 s">DONOREJO</td>
+                      <td class="column3 style23 s">KARANGTENGAH</td>
+                    </tr>
+                    <tr class="row281">
+                      <td class="column0 style21 n">67</td>
+                      <td class="column1 style35 s">BASUKI ROHMAD</td>
+                      <td class="column2 style36 s">PIDODO</td>
+                      <td class="column3 style23 s">KARANGTENGAH</td>
+                    </tr>
+                    <tr class="row282">
+                      <td class="column0 style21 n">68</td>
+                      <td class="column1 style27 s">KUSRINI</td>
+                      <td class="column2 style21 s">PIDODO</td>
+                      <td class="column3 style21 s">KARANGTENGAH</td>
+                    </tr>
+                    <tr class="row283">
+                      <td class="column0 style21 n">69</td>
+                      <td class="column1 style27 s">MUKSIN</td>
+                      <td class="column2 style21 s">PIDODO</td>
+                      <td class="column3 style21 s">KARANGTENGAH</td>
+                    </tr>
+                    <tr class="row284">
+                      <td class="column0 style21 n">70</td>
+                      <td class="column1 style27 s">ZAENI</td>
+                      <td class="column2 style21 s">PIDODO</td>
+                      <td class="column3 style21 s">KARANGTENGAH</td>
+                    </tr>
+                    <tr class="row285">
+                      <td class="column0 style21 n">71</td>
+                      <td class="column1 style27 s">KASTINI</td>
+                      <td class="column2 style21 s">WONOAGUNG</td>
+                      <td class="column3 style21 s">KARANGTENGAH</td>
+                    </tr>
+                    <tr class="row286">
+                      <td class="column0 style21 n">72</td>
+                      <td class="column1 style27 s">KLIWON</td>
+                      <td class="column2 style21 s">WONOAGUNG</td>
+                      <td class="column3 style21 s">KARANGTENGAH</td>
+                    </tr>
+                    <tr class="row287">
+                      <td class="column0 style21 n">73</td>
+                      <td class="column1 style27 s">MARSONO</td>
+                      <td class="column2 style21 s">WONOAGUNG</td>
+                      <td class="column3 style21 s">KARANGTENGAH</td>
+                    </tr>
+                    <tr class="row288">
+                      <td class="column0 style21 n">74</td>
+                      <td class="column1 style22 s">SODIKUL AMIN</td>
+                      <td class="column2 style23 s">WONOAGUNG</td>
+                      <td class="column3 style23 s">KARANGTENGAH</td>
+                    </tr>
+                    <tr class="row289">
+                      <td class="column0 style21 n">75</td>
+                      <td class="column1 style22 s">SULASTRI</td>
+                      <td class="column2 style23 s">WONOAGUNG</td>
+                      <td class="column3 style23 s">KARANGTENGAH</td>
+                    </tr>
+                    <tr class="row290">
+                      <td class="column0 style21 n">76</td>
+                      <td class="column1 style22 s">SUYONO</td>
+                      <td class="column2 style23 s">WONOAGUNG</td>
+                      <td class="column3 style23 s">KARANGTENGAH</td>
+                    </tr>
+                    <tr class="row291">
+                      <td class="column0 style21 n">77</td>
+                      <td class="column1 style22 s">ABDULLAH</td>
+                      <td class="column2 style23 s">SOKOKIDUL</td>
+                      <td class="column3 style23 s">KEBONAGUNG</td>
+                    </tr>
+                    <tr class="row292">
+                      <td class="column0 style21 n">78</td>
+                      <td class="column1 style22 s">ANSORI</td>
+                      <td class="column2 style23 s">SOKOKIDUL</td>
+                      <td class="column3 style23 s">KEBONAGUNG</td>
+                    </tr>
+                    <tr class="row293">
+                      <td class="column0 style21 n">79</td>
+                      <td class="column1 style22 s">DOFIR</td>
+                      <td class="column2 style23 s">SOKOKIDUL</td>
+                      <td class="column3 style23 s">KEBONAGUNG</td>
+                    </tr>
+                    <tr class="row294">
+                      <td class="column0 style21 n">80</td>
+                      <td class="column1 style22 s">LISTIANA SETYOWATI</td>
+                      <td class="column2 style23 s">SOKOKIDUL</td>
+                      <td class="column3 style23 s">KEBONAGUNG</td>
+                    </tr>
+                    <tr class="row295">
+                      <td class="column0 style21 n">81</td>
+                      <td class="column1 style22 s">RUWIYAH</td>
+                      <td class="column2 style23 s">SOKOKIDUL</td>
+                      <td class="column3 style23 s">KEBONAGUNG</td>
+                    </tr>
+                    <tr class="row296">
+                      <td class="column0 style21 n">82</td>
+                      <td class="column1 style22 s">WAGIYONO</td>
+                      <td class="column2 style23 s">SOKOKIDUL</td>
+                      <td class="column3 style23 s">KEBONAGUNG</td>
+                    </tr>
+                    <tr class="row297">
+                      <td class="column0 style21 n">83</td>
+                      <td class="column1 style22 s">JUNAIDI</td>
+                      <td class="column2 style23 s">TLOGOSIH</td>
+                      <td class="column3 style23 s">KEBONAGUNG</td>
+                    </tr>
+                    <tr class="row298">
+                      <td class="column0 style21 n">84</td>
+                      <td class="column1 style22 s">MASHURI</td>
+                      <td class="column2 style23 s">TLOGOSIH</td>
+                      <td class="column3 style23 s">KEBONAGUNG</td>
+                    </tr>
+                    <tr class="row299">
+                      <td class="column0 style21 n">85</td>
+                      <td class="column1 style22 s">MUH SHAFI</td>
+                      <td class="column2 style23 s">TLOGOSIH</td>
+                      <td class="column3 style23 s">KEBONAGUNG</td>
+                    </tr>
+                    <tr class="row300">
+                      <td class="column0 style21 n">86</td>
+                      <td class="column1 style22 s">SODIKIN</td>
+                      <td class="column2 style23 s">TLOGOSIH</td>
+                      <td class="column3 style23 s">KEBONAGUNG</td>
+                    </tr>
+                    <tr class="row301">
+                      <td class="column0 style21 n">87</td>
+                      <td class="column1 style22 s">SRI HARTINI</td>
+                      <td class="column2 style23 s">BRUMBUNG</td>
+                      <td class="column3 style23 s">MRANGGEN</td>
+                    </tr>
+                    <tr class="row302">
+                      <td class="column0 style21 n">88</td>
+                      <td class="column1 style22 s">SUPRIYATI</td>
+                      <td class="column2 style23 s">BRUMBUNG</td>
+                      <td class="column3 style23 s">MRANGGEN</td>
+                    </tr>
+                    <tr class="row303">
+                      <td class="column0 style21 n">89</td>
+                      <td class="column1 style22 s">ASROFI MUROD</td>
+                      <td class="column2 style23 s">SAYUNG</td>
+                      <td class="column3 style23 s">SAYUNG</td>
+                    </tr>
+                    <tr class="row304">
+                      <td class="column0 style21 n">90</td>
+                      <td class="column1 style22 s">AHMAD ZABIDI</td>
+                      <td class="column2 style23 s">BABALAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row305">
+                      <td class="column0 style21 n">91</td>
+                      <td class="column1 style22 s">LATIFUL YUSUF</td>
+                      <td class="column2 style23 s">BABALAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row306">
+                      <td class="column0 style21 n">92</td>
+                      <td class="column1 style22 s">MUSLIM</td>
+                      <td class="column2 style23 s">BABALAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row307">
+                      <td class="column0 style21 n">93</td>
+                      <td class="column1 style22 s">NOR ACHMAD</td>
+                      <td class="column2 style23 s">BABALAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row308">
+                      <td class="column0 style21 n">94</td>
+                      <td class="column1 style22 s">ABDUL LATIF, H.</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row309">
+                      <td class="column0 style21 n">95</td>
+                      <td class="column1 style22 s">ABU SYARIF</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row310">
+                      <td class="column0 style21 n">96</td>
+                      <td class="column1 style22 s">AGUS SUPRIYANTO</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row311">
+                      <td class="column0 style21 n">97</td>
+                      <td class="column1 style22 s">AHMADI</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row312">
+                      <td class="column0 style21 n">98</td>
+                      <td class="column1 style22 s">DIROH</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row313">
+                      <td class="column0 style21 n">99</td>
+                      <td class="column1 style22 s">HARTATIK</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row314">
+                      <td class="column0 style21 n">100</td>
+                      <td class="column1 style22 s">MASKURUN</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row315">
+                      <td class="column0 style21 n">101</td>
+                      <td class="column1 style22 s">MASTIKAH</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row316">
+                      <td class="column0 style21 n">102</td>
+                      <td class="column1 style22 s">MAS'UD</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row317">
+                      <td class="column0 style21 n">103</td>
+                      <td class="column1 style22 s">MOH. SHOLIKIN</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row318">
+                      <td class="column0 style21 n">104</td>
+                      <td class="column1 style22 s">MUHAMMAD MUKAROM SOLEH</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row319">
+                      <td class="column0 style21 n">105</td>
+                      <td class="column1 style22 s">NORHASYIM</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row320">
+                      <td class="column0 style21 n">106</td>
+                      <td class="column1 style22 s">NUR KADIS</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row321">
+                      <td class="column0 style21 n">107</td>
+                      <td class="column1 style22 s">RUJIATUN</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row322">
+                      <td class="column0 style21 n">108</td>
+                      <td class="column1 style22 s">SARMUNAH, H.</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row323">
+                      <td class="column0 style21 n">109</td>
+                      <td class="column1 style22 s">SRI TONAH</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row324">
+                      <td class="column0 style21 n">110</td>
+                      <td class="column1 style22 s">SURIYAH</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row325">
+                      <td class="column0 style21 n">111</td>
+                      <td class="column1 style22 s">SURYO</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row326">
+                      <td class="column0 style21 n">112</td>
+                      <td class="column1 style22 s">TUTIK NUR HIDAYAH</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row327">
+                      <td class="column0 style21 n">113</td>
+                      <td class="column1 style22 s">WARSILAH</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row328">
+                      <td class="column0 style21 n">114</td>
+                      <td class="column1 style22 s">YUSUF RIJAL</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row329">
+                      <td class="column0 style21 n">115</td>
+                      <td class="column1 style22 s">ABDUL WAHIB</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row330">
+                      <td class="column0 style21 n">116</td>
+                      <td class="column1 style22 s">ABDUL WAHID</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row331">
+                      <td class="column0 style21 n">117</td>
+                      <td class="column1 style22 s">KARDI</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row332">
+                      <td class="column0 style21 n">118</td>
+                      <td class="column1 style22 s">KHUSNUL ABID</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row333">
+                      <td class="column0 style21 n">119</td>
+                      <td class="column1 style22 s">MASKANAH</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row334">
+                      <td class="column0 style21 n">120</td>
+                      <td class="column1 style22 s">MISBAHUL MUNIR</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row335">
+                      <td class="column0 style21 n">121</td>
+                      <td class="column1 style22 s">NOOR AZZAH</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row336">
+                      <td class="column0 style21 n">122</td>
+                      <td class="column1 style22 s">NUR HAMIM</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row337">
+                      <td class="column0 style21 n">123</td>
+                      <td class="column1 style22 s">SITI ASIYAH</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row338">
+                      <td class="column0 style21 n">124</td>
+                      <td class="column1 style22 s">TIBSAROH</td>
+                      <td class="column2 style23 s">BERAHAN WETAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row339">
+                      <td class="column0 style21 n">125</td>
+                      <td class="column1 style22 s">SITI SYAFAATI</td>
+                      <td class="column2 style23 s">BUKO</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row340">
+                      <td class="column0 style21 n">126</td>
+                      <td class="column1 style22 s">SLAMET</td>
+                      <td class="column2 style23 s">BUNGO</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row341">
+                      <td class="column0 style21 n">127</td>
+                      <td class="column1 style22 s">MUHTADI</td>
+                      <td class="column2 style23 s">KEDUNGKARANG</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row342">
+                      <td class="column0 style21 n">128</td>
+                      <td class="column1 style22 s">ISAK SANUKRI</td>
+                      <td class="column2 style23 s">KEDUNGMUTIH</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row343">
+                      <td class="column0 style21 n">129</td>
+                      <td class="column1 style22 s">ZAENUDDIN</td>
+                      <td class="column2 style23 s">KEDUNGMUTIH</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row344">
+                      <td class="column0 style21 n">130</td>
+                      <td class="column1 style22 s">ABDUL AZIZ</td>
+                      <td class="column2 style23 s">KENDUREN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row345">
+                      <td class="column0 style21 n">131</td>
+                      <td class="column1 style22 s">MUHAMMAD SABIT</td>
+                      <td class="column2 style23 s">KENDUREN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row346">
+                      <td class="column0 style21 n">132</td>
+                      <td class="column1 style22 s">MUKTARIP</td>
+                      <td class="column2 style23 s">KENDUREN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row347">
+                      <td class="column0 style21 n">133</td>
+                      <td class="column1 style22 s">IDUN KHAYAT</td>
+                      <td class="column2 style23 s">TEDUNAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row348">
+                      <td class="column0 style21 n">134</td>
+                      <td class="column1 style22 s">KASRINAH</td>
+                      <td class="column2 style23 s">TEDUNAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row349">
+                      <td class="column0 style21 n">135</td>
+                      <td class="column1 style22 s">KUDASI</td>
+                      <td class="column2 style23 s">TEDUNAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row350">
+                      <td class="column0 style21 n">136</td>
+                      <td class="column1 style22 s">MASTUPAH</td>
+                      <td class="column2 style23 s">TEDUNAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row351">
+                      <td class="column0 style21 n">137</td>
+                      <td class="column1 style22 s">SAFIKUDIN</td>
+                      <td class="column2 style23 s">TEDUNAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row352">
+                      <td class="column0 style21 n">138</td>
+                      <td class="column1 style22 s">SRI WIDIYAWATI</td>
+                      <td class="column2 style23 s">TEDUNAN</td>
+                      <td class="column3 style23 s">WEDUNG</td>
+                    </tr>
+                    <tr class="row353">
+                      <td class="column0 style21 n">139</td>
+                      <td class="column1 style22 s">ISTIROMAH</td>
+                      <td class="column2 style23 s">GETAS</td>
+                      <td class="column3 style23 s">WONOSALAM</td>
+                    </tr>
+                    <tr class="row354">
+                      <td class="column0 style21 n">140</td>
+                      <td class="column1 style22 s">NURKAYATI</td>
+                      <td class="column2 style23 s">GETAS</td>
+                      <td class="column3 style23 s">WONOSALAM</td>
+                    </tr>
+                    <tr class="row355">
+                      <td class="column0 style21 n">141</td>
+                      <td class="column1 style22 s">RENI ASTUTI</td>
+                      <td class="column2 style23 s">GETAS</td>
+                      <td class="column3 style23 s">WONOSALAM</td>
+                    </tr>
+                    <tr class="row356">
+                      <td class="column0 style21 n">142</td>
+                      <td class="column1 style27 s">SITI UMI KULSUM</td>
+                      <td class="column2 style21 s">GETAS</td>
+                      <td class="column3 style21 s">WONOSALAM</td>
+                    </tr>
+                    <tr class="row357">
+                      <td class="column0 style21 n">143</td>
+                      <td class="column1 style27 s">SUWITO</td>
+                      <td class="column2 style21 s">GETAS</td>
+                      <td class="column3 style21 s">WONOSALAM</td>
+                    </tr>
+                    <tr class="row358">
+                      <td class="column0 style21 n">144</td>
+                      <td class="column1 style27 s">ABDUL GHOFUR</td>
+                      <td class="column2 style21 s">LEMPUYANG</td>
+                      <td class="column3 style21 s">WONOSALAM</td>
+                    </tr>
+                    <tr class="row359">
+                      <td class="column0 style21 n">145</td>
+                      <td class="column1 style27 s">ABDUL MUTHOLIB</td>
+                      <td class="column2 style21 s">LEMPUYANG</td>
+                      <td class="column3 style21 s">WONOSALAM</td>
+                    </tr>
+                    <tr class="row360">
+                      <td class="column0 style21 n">146</td>
+                      <td class="column1 style27 s">AHMAD SYAIFUDDIN</td>
+                      <td class="column2 style21 s">LEMPUYANG</td>
+                      <td class="column3 style21 s">WONOSALAM</td>
+                    </tr>
+                    <tr class="row361">
+                      <td class="column0 style21 n">147</td>
+                      <td class="column1 style22 s">MASKURI</td>
+                      <td class="column2 style23 s">LEMPUYANG</td>
+                      <td class="column3 style23 s">WONOSALAM</td>
+                    </tr>
+                    <tr class="row362">
+                      <td class="column0 style21 n">148</td>
+                      <td class="column1 style22 s">NGATMI</td>
+                      <td class="column2 style23 s">LEMPUYANG</td>
+                      <td class="column3 style23 s">WONOSALAM</td>
+                    </tr>
+                    <tr class="row363">
+                      <td class="column0 style21 n">149</td>
+                      <td class="column1 style22 s">NURYATI</td>
+                      <td class="column2 style23 s">LEMPUYANG</td>
+                      <td class="column3 style23 s">WONOSALAM</td>
+                    </tr>
+                    <tr class="row364">
+                      <td class="column0 style21 n">150</td>
+                      <td class="column1 style22 s">SURATMAN</td>
+                      <td class="column2 style23 s">LEMPUYANG</td>
+                      <td class="column3 style23 s">WONOSALAM</td>
+                    </tr>
+                  </tbody>
+  
+              </table>
+        </div> 
+    </div>
+    <script src="../qgis2web_2023_11_27-20_55_51_335758/js/qgis2web_expressions.js"></script>
+    <script src="../qgis2web_2023_11_27-20_55_51_335758/js/leaflet.js"></script>
+    <script src="../qgis2web_2023_11_27-20_55_51_335758/js/leaflet.rotatedMarker.js"></script>
+    <script src="../qgis2web_2023_11_27-20_55_51_335758/js/leaflet.pattern.js"></script>
+    <script src="../qgis2web_2023_11_27-20_55_51_335758/js/leaflet-hash.js"></script>
+    <script src="../qgis2web_2023_11_27-20_55_51_335758/js/Autolinker.min.js"></script>
+    <script src="../qgis2web_2023_11_27-20_55_51_335758/js/rbush.min.js"></script>
+    <script src="../qgis2web_2023_11_27-20_55_51_335758/js/labelgun.min.js"></script>
+    <script src="../qgis2web_2023_11_27-20_55_51_335758/js/labels.js"></script>
+    <script src="../qgis2web_2023_11_27-20_55_51_335758/js/leaflet-control-geocoder.Geocoder.js"></script>
+    <script src="../qgis2web_2023_11_27-20_55_51_335758/js/leaflet-search.js"></script>
+    <script src="../qgis2web_2023_11_27-20_55_51_335758/data/kecamatan_1.js"></script>
+    <script>
+    var highlightLayer;
+    function highlightFeature(e) {
+        highlightLayer = e.target;
+
+        if (e.target.feature.geometry.type === 'LineString') {
+          highlightLayer.setStyle({
+            color: '#ffff00',
+          });
+        } else {
+          highlightLayer.setStyle({
+            fillColor: '#ffff00',
+            fillOpacity: 1
+          });
+        }
+        highlightLayer.openPopup();
+    }
+    var map = L.map('map', {
+        zoomControl:true, maxZoom:28, minZoom:1
+    }).fitBounds([[-7.211750833620711,110.26628628226611],[-6.702183737029353,111.22466439854755]]);
+    var hash = new L.Hash(map);
+    map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+    var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+    var bounds_group = new L.featureGroup([]);
+    function setBounds() {
+    }
+    map.createPane('pane_OSMStandard_0');
+    map.getPane('pane_OSMStandard_0').style.zIndex = 400;
+    var layer_OSMStandard_0 = L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        pane: 'pane_OSMStandard_0',
+        opacity: 1.0,
+        attribution: '<a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors, CC-BY-SA</a>',
+        minZoom: 1,
+        maxZoom: 28,
+        minNativeZoom: 0,
+        maxNativeZoom: 19
+    });
+    layer_OSMStandard_0;
+    map.addLayer(layer_OSMStandard_0);
+    function pop_kecamatan_1(feature, layer) {
+        layer.on({
+            mouseout: function(e) {
+                for (i in e.target._eventParents) {
+                    e.target._eventParents[i].resetStyle(e.target);
+                }
+                if (typeof layer.closePopup == 'function') {
+                    layer.closePopup();
+                } else {
+                    layer.eachLayer(function(feature){
+                        feature.closePopup()
+                    });
+                }
+            },
+            mouseover: highlightFeature,
+        });
+        var popupContent = '<table>\
+                <tr>\
+                    <td colspan="2"><b>Kecamatan </b>' + (feature.properties['WADMKC'] !== null ? autolinker.link(feature.properties['WADMKC'].toLocaleString()) : '') + '</td>\
+                </tr>\
+                <tr>\
+                    <td colspan="2"><b>Kabupaten </b>' + (feature.properties['WADMKK'] !== null ? autolinker.link(feature.properties['WADMKK'].toLocaleString()) : '') + '</td>\
+                </tr>\
+                <tr>\
+                    <td colspan="2"><b>Tahap 1 : </b>' + (feature.properties['tahap 1'] !== null ? autolinker.link(feature.properties['tahap 1'].toLocaleString()) : '') + '</td>\
+                </tr>\
+                <tr>\
+                    <td colspan="2"><b>Tahap 2 : </b>' + (feature.properties['tahap 2'] !== null ? autolinker.link(feature.properties['tahap 2'].toLocaleString()) : '') + '</td>\
+                </tr>\
+                <tr>\
+                    <td colspan="2"><b>Tahap 3 : </b>' + (feature.properties['tahap 3'] !== null ? autolinker.link(feature.properties['tahap 3'].toLocaleString()) : '') + '</td>\
+                </tr>\
+                <tr>\
+                    <td colspan="2"><b>Jumlah : </b>' + (feature.properties['jumlah'] !== null ? autolinker.link(feature.properties['jumlah'].toLocaleString()) : '') + '</td>\
+                </tr>\
+            </table>';
+        layer.bindPopup(popupContent, {maxHeight: 400});
+    }
+
+    function style_kecamatan_1_0(feature) {
+        if (feature.properties['jumlah'] >= 1.000000 && feature.properties['jumlah'] <= 10.000000 ) {
+            return {
+            pane: 'pane_kecamatan_1',
+            opacity: 1,
+            color: 'rgba(35,35,35,1.0)',
+            dashArray: '',
+            lineCap: 'butt',
+            lineJoin: 'miter',
+            weight: 1.0, 
+            fill: true,
+            fillOpacity: 1,
+            fillColor: 'rgba(247,251,255,1.0)',
+            interactive: true,
+        }
+        }
+        if (feature.properties['jumlah'] >= 10.000000 && feature.properties['jumlah'] <= 20.000000 ) {
+            return {
+            pane: 'pane_kecamatan_1',
+            opacity: 1,
+            color: 'rgba(35,35,35,1.0)',
+            dashArray: '',
+            lineCap: 'butt',
+            lineJoin: 'miter',
+            weight: 1.0, 
+            fill: true,
+            fillOpacity: 1,
+            fillColor: 'rgba(200,220,240,1.0)',
+            interactive: true,
+        }
+        }
+        if (feature.properties['jumlah'] >= 20.000000 && feature.properties['jumlah'] <= 30.000000 ) {
+            return {
+            pane: 'pane_kecamatan_1',
+            opacity: 1,
+            color: 'rgba(35,35,35,1.0)',
+            dashArray: '',
+            lineCap: 'butt',
+            lineJoin: 'miter',
+            weight: 1.0, 
+            fill: true,
+            fillOpacity: 1,
+            fillColor: 'rgba(115,178,216,1.0)',
+            interactive: true,
+        }
+        }
+        if (feature.properties['jumlah'] >= 30.000000 && feature.properties['jumlah'] <= 40.000000 ) {
+            return {
+            pane: 'pane_kecamatan_1',
+            opacity: 1,
+            color: 'rgba(35,35,35,1.0)',
+            dashArray: '',
+            lineCap: 'butt',
+            lineJoin: 'miter',
+            weight: 1.0, 
+            fill: true,
+            fillOpacity: 1,
+            fillColor: 'rgba(41,121,185,1.0)',
+            interactive: true,
+        }
+        }
+        if (feature.properties['jumlah'] >= 40.000000 && feature.properties['jumlah'] <= 90.000000 ) {
+            return {
+            pane: 'pane_kecamatan_1',
+            opacity: 1,
+            color: 'rgba(35,35,35,1.0)',
+            dashArray: '',
+            lineCap: 'butt',
+            lineJoin: 'miter',
+            weight: 1.0, 
+            fill: true,
+            fillOpacity: 1,
+            fillColor: 'rgba(16,77,161,1.0)',
+            interactive: true,
+        }
+        }
+    }
+    map.createPane('pane_kecamatan_1');
+    map.getPane('pane_kecamatan_1').style.zIndex = 401;
+    map.getPane('pane_kecamatan_1').style['mix-blend-mode'] = 'normal';
+    var layer_kecamatan_1 = new L.geoJson(json_kecamatan_1, {
+        attribution: '',
+        interactive: true,
+        dataVar: 'json_kecamatan_1',
+        layerName: 'layer_kecamatan_1',
+        pane: 'pane_kecamatan_1',
+        onEachFeature: pop_kecamatan_1,
+        style: style_kecamatan_1_0,
+    });
+    bounds_group.addLayer(layer_kecamatan_1);
+    map.addLayer(layer_kecamatan_1);
+    var osmGeocoder = new L.Control.Geocoder({
+        collapsed: true,
+        position: 'topleft',
+        text: 'Search',
+        title: 'Testing'
+    }).addTo(map);
+    document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
+    .className += ' fa fa-search';
+    document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
+    .title += 'Search for a place';
+    var baseMaps = {};
+    L.control.layers(baseMaps,{'kecamatan<br /><table><tr><td style="text-align: center;"><img src="../qgis2web_2023_11_27-20_55_51_335758/legend/kecamatan_1_sangatsedikit0.png" /></td><td>sangat sedikit</td></tr><tr><td style="text-align: center;"><img src="../qgis2web_2023_11_27-20_55_51_335758/legend/kecamatan_1_sedikit1.png" /></td><td>sedikit</td></tr><tr><td style="text-align: center;"><img src="../qgis2web_2023_11_27-20_55_51_335758/legend/kecamatan_1_netral2.png" /></td><td>netral</td></tr><tr><td style="text-align: center;"><img src="../qgis2web_2023_11_27-20_55_51_335758/legend/kecamatan_1_banyak3.png" /></td><td>banyak</td></tr><tr><td style="text-align: center;"><img src="../qgis2web_2023_11_27-20_55_51_335758/legend/kecamatan_1_sangatbanyak4.png" /></td><td>sangat banyak</td></tr></table>': layer_kecamatan_1,"OSM Standard": layer_OSMStandard_0,}).addTo(map);
+    setBounds();
+    var i = 0;
+    layer_kecamatan_1.eachLayer(function(layer) {
+        var context = {
+            feature: layer.feature,
+            variables: {}
+        };
+        layer.bindTooltip((layer.feature.properties['WADMKC'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['WADMKC']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_kecamatan_1'});
+        labels.push(layer);
+        totalMarkers += 1;
+          layer.added = true;
+          addLabel(layer, i);
+          i++;
+    });
+    map.addControl(new L.Control.Search({
+        layer: layer_kecamatan_1,
+        initial: false,
+        hideMarkerOnCollapse: true,
+        propertyName: 'WADMKC'}));
+    document.getElementsByClassName('search-button')[0].className +=
+     ' fa fa-binoculars';
+    resetLabels([layer_kecamatan_1]);
+    map.on("zoomend", function(){
+        resetLabels([layer_kecamatan_1]);
+    });
+    map.on("layeradd", function(){
+        resetLabels([layer_kecamatan_1]);
+    });
+    map.on("layerremove", function(){
+        resetLabels([layer_kecamatan_1]);
+    });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="../script.js" type="text/javascript"></script>
+</body>
+</html>

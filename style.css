@@ -9,7 +9,7 @@
 }
 
 body{
-    min-height: 100vh;
+    /* min-height: 100vh; */
     overflow-x: hidden;
     background: linear-gradient(#2b1055, #7597de);
 }
@@ -27,13 +27,14 @@ header{
 }
 
 header .logo{
+    height: auto;
     color: #fff;
     font-weight: 700;
     text-decoration: none;
-    font-size: 2rem;
+    /* font-size: 2rem; */
     text-transform: uppercase;
-    letter-spacing: 2px;
-}
+    /* letter-spacing: 2px; */ 
+} 
 
 header ul{
     display: flex;
@@ -63,6 +64,12 @@ header ul{
     transform: translate(0, -11px) rotate(45deg);
 }
 
+header #nav-menu-bar.menu-active{
+    right: 0;
+}
+header ul{
+    margin-bottom: 0;
+}
 header ul li {
     list-style: none;
     margin-left: 20px;
@@ -94,8 +101,52 @@ section{
     background-image: url('images/masjid_agung_demak\ \(1\).jpg'); 
     background-repeat: no-repeat;
     background-size: cover;
-    height: 50vh;
+    height: 70vh;
 } 
+.heroAbout.pt{
+    height: 30vh;
+}
+.heroAbout p{
+    z-index: 10000;
+}
+ .person{ 
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    /* margin-top: 30px; */
+    /* margin-bottom: -40px; */
+}
+ .person img{  
+    position: relative;
+    width: 100%;
+    filter: drop-shadow(5px 5px 10px #7597de);
+}
+.card-person{
+    background-color:#f0f0f0;
+    position: relative; 
+    z-index: 1000;
+    min-width: 400px;
+    max-width: 800px;
+    padding: 2rem 3rem;
+    display: flex;
+    margin: -50px auto 3rem auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    gap: 1rem;
+}
+
+/* .colm{
+    border-right: 1px solid #37146f;
+    flex: 1 0 250px;
+    
+}
+.colm:last-child{
+    border: none;
+} */
+.colm span{
+    font-size: .9rem;
+}
 
 section::before{
     content: '';
@@ -178,8 +229,125 @@ section img#mountains_front{
 }
 .chart:hover{
     transform :scale(1.01)
+} 
+.container-card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.card-box{
+    /* flex: 1 0 220px; */
+    max-width: 300px;
+    margin: 1rem 0;
+    /* background-color: */
+    border-radius: 5px; 
+    overflow: hidden; 
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    cursor: pointer; 
+}
+.card-box:hover{
+    /* transform: scale(1.01); */
+    transform: translate(-3px,-3px);
+    transition: .2s;
+    box-shadow: 2px 2px 5px #37146f;
+}
+.card-box .image img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+.card-box .deskripsi a{
+    text-decoration: none;
+}
+.card-box .deskripsi a h3{
+    color: #fff;
+    margin: 1rem; 
+    margin-bottom: 0.5rem;
+}
+.card-box .deskripsi a p{
+    margin: 1rem;
+    font-size: 0.9rem;
+}
+.brdr{
+    width: 150px;
+    background-color:#7597de;
+    padding: 2px;
+    border-radius: 5px;
+    margin-left: 1rem;
+}
+.brdr::after{
+    content: '';
+    background-color: #f3fc46;
+    padding: 2px;
+    width: 50px;
+    float: left;
+    position: relative;
+    top: -2px;
+    right: 2px;
+    border-radius:  5px 0 0 5px;
+}
+.khusus{
+    min-width: 400px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.brdr-khusus{
+    padding: 2px;
+    background-color: #4646fc;
+    border-radius: 5px;
+} 
+
+.form-container{
+    /* background-color: #77298a; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    min-width: 400px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.form-box{
+    flex: 1 0 250px;
+    display: flex;
+    flex-direction: column;
+}
+.form-box-textarea{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
+.form-box label, .form-box-textarea label{
+    color: #fff;
+    margin: 0.5rem 0;
+}
+.form-box input[type='text'],.form-box input[type='number'],.form-box input[type='email'],.form-box-textarea textarea{
+    padding: 0.5rem 1rem;
+    outline: none;
+}
+ 
+.form-box-button{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.form-box-button button{ 
+    padding: 0.5rem 1rem;
+    background-color: #4646fc;
+    color: #fff;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer; 
+    min-width: 250px;
+}
+
+.mt-3 table tbody tr td, .mt-3 table tbody tr th{
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
 @media screen and (max-width: 768px){
     .menu-hamburger{ 
         display: inline-block;
@@ -191,7 +359,35 @@ section img#mountains_front{
     #btn{
         transform: translateY(75px);
     }
-    .nav-menu{
-        display: none;
+    .nav-menu{ 
+        position: absolute;
+        top: 90px;
+        right: -500px;
+        padding: 2rem 2rem;
+        line-height: 50px;
+        min-height: 100vh;
+        background-color: #1c0522;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: end;
+        transition: .5s;  
+        z-index: 11000;
+    }
+    .sec h2{ 
+        font-size: 1.8em;
+        margin-bottom: 10px;
+        color: #fff;
+    } 
+    
+    .sec p{
+        font-size: .9em;
+        color: #fff;
+    }
+    .container-card{
+        justify-content: center;
+    }
+    .card-box{
+       max-width: 300px;
     }
 }
